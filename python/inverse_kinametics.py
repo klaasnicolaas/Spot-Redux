@@ -30,7 +30,7 @@ def calculateLegJointsInDeg():
         s = y
         shoulderLegAngle = -0.5*math.pi
     else:
-        s = math.sqrt((y*y)/(z*z))
+        s = math.sqrt((y*y)+(z*z))
         shoulderLegAngle = math.atan(y/z)
 
     #Refer to Readme.md for explanation.
