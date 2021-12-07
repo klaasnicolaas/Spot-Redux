@@ -44,8 +44,8 @@ def calculateLegJointsInDeg():
     #Put leg offset logic here.
 
     #Calculates angle difference due to upper leg state.
-    verschilBovenBeen = upperLegAngle - 90
-    lowerLegAngle = lowerLegAngle - verschilBovenBeen 
+    diffUpperLeg = upperLegAngle - 90
+    lowerLegAngle = lowerLegAngle - diffUpperLeg 
 
     #Invert upperLegAngle due to inverted motor rotation.
     upperLegAngle = 180 - upperLegAngle
