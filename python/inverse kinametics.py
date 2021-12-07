@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import math
-
+import matplotlib.pyplot as plt 
 
 """
 ---------------------------
@@ -12,25 +12,17 @@ TODO: Give function input and output values so that it can be imported and used 
 ---------------------------
 """
 
-def calculateLegJointsInDeg():
+def calculateLegJointsInDeg(x, y, z):
     lowerLeg = 100
     upperLeg = 100
     lowerLegOffset = 24.24
-    
-    x = 1
-    y = -70
-    z = 0
 
     #Put leg offset logic here
     #something like: y = y + lowerLegOffset
 
     #Different calculation incase of no Z offset.
-    if (z == 0):
-        s = y
-        shoulderLegAngle = -0.5*math.pi
-    else:
-        s = math.sqrt((y*y)/(z*z))
-        shoulderLegAngle = math.atan(y/z)
+    s = (math.sqrt((y*y)/(z*z))
+    shoulderLegAngle = (math.atan(y/z))
 
     #Refer to Readme.md for explanation.
     lowerLegAngle = math.acos((x*x + s*s - lowerLeg*lowerLeg - upperLeg*upperLeg)/(2*lowerLeg*upperLeg))
@@ -62,9 +54,23 @@ def calculateLegJointsInDeg():
     print("onderbeenpos: " + str(lowerLegAngle))
     print("bovenbeenpos: " + str(upperLegAngle))
     print("schouderpos: " + str(shoulderLegAngle))
-    
-def main(arguments):
-    calcs()    
+    forwardKinametics(lowerLegAngle, upperLegAngle, shoulderLegAngle)
 
-if __name__ == '__main__':
-    sys.exit(main(sys.argv[1:]))
+def forwardKinametics(lowerLegAngle, upperLegAngle, shoulderLegAngle):
+    x = math.tan(upperLegAngle)*(math.cos(lowerLegAngle+45)*20)
+    print("------------")
+    print(x)
+
+def main():
+    for x in range(-40,40):
+        calculateLegJointsInDeg(x, -100, 1)
+
+    #plt.plot(x, y) 
+    plt.xlabel('x - axis')
+    plt.ylabel('y - axis') 
+    plt.title('My first graph!') 
+    plt.show() 
+
+
+if __name__ == "__main__":
+    main()
