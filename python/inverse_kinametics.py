@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import math
+import sys
 
 
 """
@@ -64,7 +65,7 @@ def calculateLegJointsInDeg():
     print("schouderpos: " + str(shoulderLegAngle))
     
 def main(arguments):
-    calcs()    
+    calculateLegJointsInDeg()
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv[1:]))
