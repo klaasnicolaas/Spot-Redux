@@ -13,14 +13,14 @@ TODO: Give function input and output values so that it can be imported and used 
 ---------------------------
 """
 
-def calculateLegJointsInDeg():
+x: int = 1
+y: int = -110
+z: int = 0
+
+def calculateLegJointsInDeg(x, y, z):
     lowerLeg = 100
     upperLeg = 100
     lowerLegOffset = 24.24
-    
-    x = 1
-    y = -70
-    z = 0
 
     #Put leg offset logic here
     #something like: y = y + lowerLegOffset
@@ -30,7 +30,7 @@ def calculateLegJointsInDeg():
         s = y
         shoulderLegAngle = -0.5*math.pi
     else:
-        s = math.sqrt((y*y)/(z*z))
+        s = math.sqrt((y*y)+(z*z))
         shoulderLegAngle = math.atan(y/z)
 
     #Refer to Readme.md for explanation.
@@ -58,14 +58,15 @@ def calculateLegJointsInDeg():
         upperLegAngle = 180 + upperLegAngle
     if(lowerLegAngle <= 0):
         lowerLegAngle = 180 + lowerLegAngle
-    
-    print("--------")
-    print("onderbeenpos: " + str(lowerLegAngle))
-    print("bovenbeenpos: " + str(upperLegAngle))
-    print("schouderpos: " + str(shoulderLegAngle))
-    
+
+    # print("--------")
+    # print("onderbeenpos: " + str(lowerLegAngle))
+    # print("bovenbeenpos: " + str(upperLegAngle))
+    # print("schouderpos: " + str(shoulderLegAngle))
+    return lowerLegAngle, upperLegAngle, shoulderLegAngle
+
 def main(arguments):
-    calculateLegJointsInDeg()
+    calculateLegJointsInDeg(x, y, z)
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv[1:]))
