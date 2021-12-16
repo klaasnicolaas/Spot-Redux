@@ -19,12 +19,12 @@ kinamatics_test: bool = True
 
 if (kinamatics_test):
     """Test with Inverse Kinamatics."""
-    # x: int = 1
+    x: int = 1
     y: int = -110
     z: int = 0
 
     while True:
-        for x in range(-90, 120, 1):
+        for x in range(-100, 100, 1):
             if (x == 0):
                 x = 0.00001
             lowerLeg, upperLeg, shoulderLeg = kinamatics.calculateLegJointsInDeg(x, y, z)
@@ -35,7 +35,7 @@ if (kinamatics_test):
             # Onderbeen
             kit.servo[2].angle = lowerLeg # 80 / 30
             time.sleep(0.005)
-        for x in range(120, -90, -1):
+        for x in range(100, -100, -1):
             if (x == 0):
                 x = 0.00001
             lowerLeg, upperLeg, shoulderLeg = kinamatics.calculateLegJointsInDeg(x, y, z)
@@ -48,18 +48,18 @@ if (kinamatics_test):
             time.sleep(0.005)
 else:
     """Test with single positions."""
-    # kit.servo[0].angle = 90
-    # kit.servo[1].angle = 90 # 50 / 110
-    # kit.servo[2].angle = 90 # 80 / 30
+    kit.servo[0].angle = 90
+    kit.servo[1].angle = 90 # 50 / 110
+    kit.servo[2].angle = 90 # 80 / 30
 
-    x: int = 1
-    y: int = -160
-    z: int = 0
+    # x: int = 1
+    # y: int = -160
+    # z: int = 0
 
-    lowerLeg, upperLeg, shoulderLeg = kinamatics.calculateLegJointsInDeg(x, y, z)
-    # Schouder
-    kit.servo[0].angle = shoulderLeg
-    # Bovenbeen
-    kit.servo[1].angle = upperLeg
-    # Onderbeen
-    kit.servo[2].angle = lowerLeg
+    # lowerLeg, upperLeg, shoulderLeg = kinamatics.calculateLegJointsInDeg(x, y, z)
+    # # Schouder
+    # kit.servo[0].angle = shoulderLeg
+    # # Bovenbeen
+    # kit.servo[1].angle = upperLeg
+    # # Onderbeen
+    # kit.servo[2].angle = lowerLeg
