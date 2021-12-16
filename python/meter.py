@@ -18,15 +18,20 @@ kinamatics_test: bool = True
 # Onderbeen min = 30
 
 def correct_value(axis, value):
-    if (value < 5 | value == 255):
-        return -5
-    return -value
+    if (axis == "x"):
+        if (value < 5):
+            if (value == 0):
+                return 1
+            return (5 - 105)
+        elif (value >= 250):
+            return (5 - 105)
+    return (value - 200)
 
 def main():
     # x: int = 1
     x: int = 1
-    y: int = -110
-    z: int = 0
+    y: int = -195
+    z: int = 10
 
     print('Running. Press CTRL-C to exit.')
     with serial.Serial('/dev/ttyUSB0', 115200) as arduino:
@@ -35,9 +40,9 @@ def main():
             print("{} connected!".format(arduino.port))
             try:
                 while True:
-                    value = arduino.readline().decode('utf-8').rstrip()
-                    y = correct_value(int(value))
-                    print(value)
+                    # value = arduino.readline().decode('utf-8').rstrip()
+                    # y = correct_value("y", int(value))
+                    # print(f"Beweging: {y} mm")
                     lowerLeg, upperLeg, shoulderLeg = kinamatics.calculateLegJointsInDeg(x, y, z)
                     # Schouder
                     kit.servo[0].angle = shoulderLeg
@@ -47,7 +52,17 @@ def main():
                     kit.servo[2].angle = lowerLeg # 80 / 30
                     time.sleep(0.005)
             except KeyboardInterrupt:
+                reset_position()
                 print("KeyboardInterrupt has been caught.")
+
+def reset_position():
+    lowerLeg, upperLeg, shoulderLeg = kinamatics.calculateLegJointsInDeg(1, -110, 10)
+    # Schouder
+    kit.servo[0].angle = shoulderLeg
+    # Bovenbeen
+    kit.servo[1].angle = upperLeg # 50 / 110
+    # Onderbeen
+    kit.servo[2].angle = lowerLeg # 80 / 30
 
 if __name__ == "__main__":
     main()
