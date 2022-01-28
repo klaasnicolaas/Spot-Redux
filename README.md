@@ -15,8 +15,12 @@ A Quadruped robot based on the Kangal model and equipped with an ESP32 to contro
 ## Demo
 
 <p align="center">
-  <iframe width="450" height="315" src="https://www.youtube.com/embed/2IXcY3YnklY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <iframe width="450" height="315" src="https://www.youtube.com/embed/lb17rW7wsXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <a href="http://www.youtube.com/watch?feature=player_embedded&v=2IXcY3YnklY" target="_blank">
+    <img src="http://img.youtube.com/vi/2IXcY3YnklY/mqdefault.jpg" alt="Demo from PingguSoft" width="450" height="315" border="10" />
+  </a>
+  <a href="http://www.youtube.com/watch?feature=player_embedded&v=lb17rW7wsXE" target="_blank">
+    <img src="http://img.youtube.com/vi/lb17rW7wsXE/mqdefault.jpg" alt="Our own demo" width="450" height="315" border="10" />
+  </a>
 </p>
 
 ## Hardware
