@@ -50,15 +50,15 @@ Below is a list of parts, which is divided into essential and optional parts dep
 ## Demo
 
 <p align="center">
-  <a href="http://www.youtube.com/watch?feature=player_embedded&v=2IXcY3YnklY" target="_blank">
-    <img src="http://img.youtube.com/vi/2IXcY3YnklY/mqdefault.jpg" alt="Demo from PingguSoft" width="320" height="220" border="10" />
+  <a href="http://www.youtube.com/watch?feature=player_embedded&v=1uqOXX4e2nw" target="_blank">
+    <img src="http://img.youtube.com/vi/1uqOXX4e2nw/mqdefault.jpg" alt="Our own demo" width="340" height="200" border="10" />
   </a>
   <a href="http://www.youtube.com/watch?feature=player_embedded&v=lb17rW7wsXE" target="_blank">
-    <img src="http://img.youtube.com/vi/lb17rW7wsXE/mqdefault.jpg" alt="Our own demo" width="320" height="220" border="10" />
+    <img src="http://img.youtube.com/vi/lb17rW7wsXE/mqdefault.jpg" alt="Our own demo" width="340" height="200" border="10" />
   </a>
 </p>
 
-On the left is the demo of [PingguSoft][pinggusoft-quadruped] and on the right a demo of our own. During our project we made a lot more video, you can find them in the [playlist][playlist].
+During our project we made a lot more video, you can find them in the [playlist][playlist].
 
 ## Simulation
 
