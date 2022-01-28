@@ -8,20 +8,13 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
+<p align="center">
+  <img width="50%" src="images/spot-redux.png">
+</p>
+
 ## About
 
-A Quadruped robot based on the Kangal model and equipped with an ESP32 to control everything. Built during the minor in Robotics at the University of Applied Science of Leiden (Netherlands).
-
-## Demo
-
-<p align="center">
-  <a href="http://www.youtube.com/watch?feature=player_embedded&v=2IXcY3YnklY" target="_blank">
-    <img src="http://img.youtube.com/vi/2IXcY3YnklY/mqdefault.jpg" alt="Demo from PingguSoft" width="280" height="200" border="10" />
-  </a>
-  <a href="http://www.youtube.com/watch?feature=player_embedded&v=lb17rW7wsXE" target="_blank">
-    <img src="http://img.youtube.com/vi/lb17rW7wsXE/mqdefault.jpg" alt="Our own demo" width="280" height="200" border="10" />
-  </a>
-</p>
+A Quadruped robot based on the Kangal model and equipped with an ESP32 to control everything. Project during the minor in Robotics at the University of Applied Science of Leiden (Netherlands).
 
 ## Hardware
 
@@ -47,6 +40,19 @@ Below is a list of parts, which is divided into essential and optional parts dep
 | PDC004-PD 9V        | usb-c PD decoy module                | 1         |
 | STPS2045C           | power shottky rectifier              | 1         |
 | battery indicator   | Lithium Battery Capacity Indicator   | 1         |
+
+## Demo
+
+<p align="center">
+  <a href="http://www.youtube.com/watch?feature=player_embedded&v=2IXcY3YnklY" target="_blank">
+    <img src="http://img.youtube.com/vi/2IXcY3YnklY/mqdefault.jpg" alt="Demo from PingguSoft" width="320" height="220" border="10" />
+  </a>
+  <a href="http://www.youtube.com/watch?feature=player_embedded&v=lb17rW7wsXE" target="_blank">
+    <img src="http://img.youtube.com/vi/lb17rW7wsXE/mqdefault.jpg" alt="Our own demo" width="320" height="220" border="10" />
+  </a>
+</p>
+
+On the left is the demo of [PingguSoft][pinggusoft-quadruped] and on the right a demo of our own. During our project we made a lot more video, you can find them in the [playlist][playlist].
 
 ## Simulation
 
@@ -89,3 +95,7 @@ What each button on your controller represents:
 
 <!-- Products -->
 [gamesir]: https://www.banggood.com/nl/GameSir-T1s-bluetooth-Wireless-Gaming-Controller-Gamepad-for-Android-Windows-VR-TV-Box-p-1192063.html
+
+<!-- Links -->
+[pinggusoft-quadruped]: https://github.com/PingguSoft/esp32_quadruped
+[playlist]: https://www.youtube.com/playlist?list=PLuJ3dQQgpPGkJtYmtJ5d6FHydhD2ZlgSz
