@@ -29,3 +29,9 @@ pip install -r requirements.txt
 ```
 
 </details>
+
+# Reference
+
+  - IK model [12-DOF Quadrupedal Robot: InverseKinematics by Adham Elarabawy](https://www.adham-e.dev/pdf/IK_Model.pdf)
+  - [Kangal cad files](https://grabcad.com/library/diy-quadruped-robot-1) by Baris ALP
+  - [ESP32 QuadRuped](https://github.com/PingguSoft/esp32_quadruped) code from PingguSoft.
