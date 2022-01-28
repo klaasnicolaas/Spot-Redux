@@ -14,7 +14,13 @@
 
 ## About
 
-A Quadruped robot based on the Kangal model and equipped with an ESP32 to control everything. Project during the minor in Robotics at the University of Applied Science of Leiden (Netherlands).
+A Quadruped robot based on the Kangal model and equipped with an ESP32 to control everything. Project during the minor in Robotics at the University of Applied Science of Leiden (Netherlands). **Note**: this project is still in a development phase, which means that some things may not be finished yet.
+
+### Glossary
+
+- **Tibia**: The lower part of the leg.
+- **Femur**: The upper part of the leg.
+- **Coxa**: The shoulder part.
 
 ## Hardware
 
